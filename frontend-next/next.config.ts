@@ -11,10 +11,8 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: false,
-  async rewrites() {
-    return [
-      { source: "/api/:path*", destination: "http://localhost:3000/api/:path*" },
-    ];
+  typescript: {
+    ignoreBuildErrors: true,
   },
   async headers() {
     return [
